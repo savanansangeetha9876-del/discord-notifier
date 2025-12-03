@@ -1,6 +1,6 @@
 import requests
-
-WEBHOOK_URL = "YOUR_WEBHOOK_URL"
+import os
+WEBHOOK_URL = os.environ["DISCORD_WEBHOOK"]
 
 message = {
     "embeds": [
@@ -18,4 +18,4 @@ message = {
     "username": "Market Notifier"
 }
 
-requests.post('https://discord.com/api/webhooks/1445780019535413390/35TuJ8fY0jge3Ql92jGa9YAgWtukMTadxbEvUg2BX4d_tBaO4_-TL_wSeXDXdyydzfNZ', json=message)
+requests.post(WEBHOOK_URL, json=message)
