@@ -15,7 +15,7 @@ message = {
             "color": 5814783
         }
     ],
-    "username": "Market Notifier"
+    "username": "Action Required Traders!"
 }
 
 requests.post(WEBHOOK_URL, json=message)
